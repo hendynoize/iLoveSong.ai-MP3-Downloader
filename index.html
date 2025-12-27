@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Download MP3 iLoveSong.ai</title>
+  <meta name="description" content="Preview dan download MP3 hasil generate dari iLoveSong.ai. Mobile friendly, cepat, dan gratis.">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+    }
+    .container {
+      max-width: 480px;
+      margin: auto;
+      padding: 16px;
+    }
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+    p {
+      font-size: .9rem;
+      color: #555;
+    }
+    input, button, audio {
+      width: 100%;
+      margin-top: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+    }
+    input {
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+    button {
+      padding: 12px;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-generate {
+      background: #4f46e5;
+      color: #fff;
+    }
+    .btn-download {
+      background: #16a34a;
+      color: #fff;
+      display: none;
+      text-decoration: none;
+      text-align: center;
+      line-height: 44px;
+    }
+    audio {
+      display: none;
+    }
+    .status {
+      margin-top: 10px;
+      font-size: .9rem;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: .8rem;
+      text-align: center;
+      color: #777;
+    }
+.img-row {
+  display: flex;
+  gap: 1px;
+  margin-top: 12px;
+}
+
+.img-item {
+  flex: 1;
+  text-align: center;
+}
+
+.img-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+box-shadow:
+  0 10px 25px rgba(0,0,0,0.15),
+  0 4px 10px rgba(0,0,0,0.08);
+
+
+
+}
+.img-item img {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.img-item img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+  
+.img-item figcaption {
+  margin-top: 6px;
+  font-size: 0.5rem;
+  color: #555;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+<h1>Preview & Download MP3 Dari iLoveSong.ai</h1>
+
+<div class="img-row">
+  <figure class="img-item">
+    <img src="copy-link.jpg" alt="Cara copy link iLoveSong AI" loading="lazy">
+    <figcaption>Copy link share lagu hasil AI</figcaption>
+  </figure>
+
+  <figure class="img-item">
+    <img src="sosmed.jpg" alt="Promo Gmail generate lagu AI" loading="lazy">
+    <figcaption>Promo 1700+ Gmail untuk generate lagu AI</figcaption>
+  </figure>
+</div>
+
+
+
+  <input id="pageUrl" type="url" placeholder="https://ilovesong.ai/work/..." required>
+
+  <button class="btn-generate" onclick="generate()">Generate</button>
+
+  <!-- Audio Player -->
+  <audio id="audioPlayer" controls></audio>
+
+  <!-- Download Button -->
+  <a id="downloadBtn" class="btn-download">Download MP3</a>
+
+  <div id="status" class="status"></div>
+
+  <footer id="footer">© 2025 - Code by <a href="https://hendynoize.net" target="blank">hendynoize</a></footer>
+</div>
+
+<script src="https://script.hendynoize.net/ilovesongai.js"></script>
+
+</body>
+</html>
