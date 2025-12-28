@@ -5,8 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Download MP3 iLoveSong.ai</title>
-  <meta name="description" content="Preview dan download MP3 hasil generate dari iLoveSong.ai. Mobile friendly, cepat, dan gratis.">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Preview dan download MP3 hasil generate dari iLoveSong.ai. Mobile friendly, cepat, dan gratis."/>
+  <meta name="application-name" content="iLoveSong.ai"/>
+  <link rel="canonical" href="https://ilovesong.ai"/>
+  <meta property="og:title" content="iLoveSong.ai"/>
+  <meta property="og:description" content="Preview dan download MP3 hasil generate dari iLoveSong.ai. Mobile friendly, cepat, dan gratis."/>
+ <meta property="og:url" content="https://ilovesong.ai"/>
+ <meta property="og:site_name" content="iLoveSong.ai"/>
+ <meta property="og:locale" content="en_US"/>
+ <meta property="og:image" content="https://ilovesong.ai/opengraph-image.png"/>
+ <meta property="og:image:width" content="1200"/>
+ <meta property="og:image:height" content="660"/>
+ <meta property="og:type" content="website"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:creator" content="@songaimusic"/>
+ <meta name="twitter:title" content="iLoveSong.ai"/>
+ <meta name="twitter:description" content="Preview dan download MP3 hasil generate dari iLoveSong.ai. Mobile friendly, cepat, dan gratis."/>
+ <meta name="twitter:image" content="https://ilovesong.ai/opengraph-image.png"/>
+ <meta name="twitter:image:width" content="1200"/>
+ <meta name="twitter:image:height" content="660"/>
+ <meta name="next-size-adjust"/>
+<meta name="robots" content="index, follow">
+<link rel="preload" as="image" imageSrcSet="/_next/image?url=%2Ficon.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Ficon.png&amp;w=64&amp;q=75 2x" fetchPriority="high"/>
+<link rel="preload" as="image" href="https://cdn.ilovesong.ai/f13ffb1-7645-150f-e65-728f2a6c8e2_Beatmaker_vs_Music_Producer_vs_Songwriter.png"/>
+<link rel="preload" as="image" href="https://cdn.ilovesong.ai/female-fronted-bands-no-doubt-billboard-450.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://ilovesong.ai/_next/image?url=%2Ficon.png&w=32&q=75">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ilovesong.ai/_next/image?url=%2Ficon.png&w=16&q=75">
 
   <style>
     body {
@@ -19,7 +43,22 @@
       max-width: 480px;
       margin: auto;
       padding: 16px;
-    }
+ border: 2px dashed #999;
+  border-radius: 8px;
+
+  padding: 20px;
+  background-color: #fff;
+
+  /* Shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  /* Optional */
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
     h1 {
       font-size: 1.4rem;
       margin-bottom: 6px;
@@ -28,36 +67,53 @@
       font-size: .9rem;
       color: #555;
     }
-    input, button, audio {
-      width: 100%;
-      margin-top: 12px;
-      font-size: 1rem;
-      border-radius: 8px;
-    }
-    input {
-      padding: 12px;
-      border: 1px solid #ddd;
-    }
-    button {
-      padding: 12px;
-      border: none;
-      cursor: pointer;
-    }
-    .btn-generate {
-      background: #4f46e5;
-      color: #fff;
-    }
-    .btn-download {
-      background: #16a34a;
-      color: #fff;
-      display: none;
-      text-decoration: none;
-      text-align: center;
-      line-height: 44px;
-    }
-    audio {
-      display: none;
-    }
+
+   input,
+button,
+audio,
+.btn-download {
+  width: 100%;
+  margin-top: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* INPUT */
+input {
+  padding: 12px;
+  border: 2px solid #ddd;
+}
+
+/* BUTTON */
+button {
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-generate {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.btn-download {
+  background: #16a34a;
+  color: #fff;
+  display: none;
+  text-decoration: none;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+}
+
+/* AUDIO */
+audio {
+  height: 44px;
+  display: none; /* tampilkan saat sudah ada audio */
+}
+
     .status {
       margin-top: 10px;
       font-size: .9rem;
@@ -80,7 +136,7 @@
 }
 
 .img-item img {
-  width: 100%;
+  width: 60%;
   height: auto;
   border-radius: 8px;
 box-shadow:
@@ -100,9 +156,11 @@ box-shadow:
   
 .img-item figcaption {
   margin-top: 6px;
-  font-size: 0.5rem;
+  font-size: 0.1rem;
   color: #555;
 }
+
+
 
   </style>
 </head>
